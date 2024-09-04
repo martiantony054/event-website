@@ -1,20 +1,1527 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet"> 
-    <link rel="icon" href="">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    LIZARA
+    </title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png"
+    href="https://img.freepik.com/premium-vector/letter-e-logo-arrow-design-combination-colorful-style_526811-307.jpg">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Outfit", sans-serif;
+    }
+
+    body,
+    .navbar {
+      background-color: white;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #nav {
+      background-color: #f0a78e;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding-top: 20px;
+      padding-right: 300px;
+
+    }
+
+    #ul {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 0px;
+    }
+  #btn {
+  border: none;
+  width: 17em;
+  height: 4em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #f0a78e;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  margin-left: 20px;
+}
+
+.sparkle {
+  fill: white;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: white;
+  font-size: 18px;
+}
+
+#btn:hover {
+  background: linear-gradient(0deg,#84e3d1,#6be3cd);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+  0px 0px 180px 0px #84e3d1;
+  transform: translateY(-2px);
+}
+
+#btn:hover .text {
+  color: white;
+}
+
+#btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
+#first{
+height:700px;
+width:600px;
+transform: translateY(-20px);
+
+} 
+.about{
+  font-family: 'Sevillana', cursive;
+}
+#btn2 {
+  --primary-color: salmon;
+  --secondary-color: #fff;
+  --hover-color: #91DDCF;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 30px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+#btn2 .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn2 .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+#btn2 .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+#btn2:hover {
+  background-color: var(--hover-color);
+}
+
+#btn2:hover .arrow {
+  background: var(--secondary-color);
+}
+
+#btn2:hover .arrow:before {
+  right: 0;
+}
+
+.menu-card{
+            background-color: transparent;
+            border-radius: 0px;
+        }
+        
+        .menu-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+        }
+        .menu-card-content {
+            text-align: center;
+        }
+        .menu-card button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ffffff;
+            color:white;
+            border: none;
+            border-radius: 10px;
+            
+        }
+        .menu-card button:hover {
+            background-color: #ffffff;
+        }
+        .nav-link {
+        background-color: #f0a78e; /* Default button color */
+        color: white; /* Text color */
+        border: none; /* Remove any border */
+        box-shadow: none; /* Remove box-shadow */
+        outline: none; /* Remove focus outline */
+    }
+        
+        .nav-link.active {
+            background-color: transparent;
+            color: white;
+        }
+        .nav-link.active:hover {
+            background-color: #ffffff;
+        }
+        .black-bg {
+    background-color: transparent;
+    color:black;
+    border: none;
+}
+
+        .text-center{
+            font-family: 'Sevillana', cursive;
+            font-weight: 700;
+            font-style: normal;
+            margin-top: 80px;
+            font-size: 60px;
+
+        }
+        .card {
+        border: none;
+        }
+        .card-title{
+            font-family: "DM Serif Text", serif;
+            font-size: 30px;
+            
+        }
+        .card-text{
+              font-family: "Alegreya", serif;
+              text-align: justify;
+              
+        }
+        
+        
+        .event{
+            font-family: "Baskervville SC", serif;
+            font-size:30px;
+        }
+        .image-container {
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden; 
+
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-overlay {
+    position: absolute;
+    bottom:80px;
+    left: 10px;
+    right: 0;
+    padding: 10px; /* Adjust padding as needed */
+    background-color: rgb(255, 255, 255) ; /* Adjust opacity and color */
+    width: 200px;
+    height: 50px;
+    margin-left:100px;
+    margin-right: 200px;
+    color: rgb(0, 0, 0);
+    
+    text-align: center;
+    font-size: 20px; /* Adjust font size as needed */
+    visibility: hidden;
+  }
+
+  .image-container:hover .text-overlay {
+    visibility: visible;
+  }
+  .Lizara{
+    font-family: "DM Serif Text", serif;
+    font-size: 100px;
+  }
+
+        .nav-link {
+            font-size: 28px;
+            font-family: "DM Serif Text", serif; /* Increase font size for navbar links */
+        }
+
+        
+        
+</style>
 
 </head>
+
 <body>
-    <nav>
+  <!-- navbar -->
+  <div id="nav">
+    <div>
+      <p style="color:#ffffff">Follow us on :</p>
+    </div>
+    <div>
+      <ul id="ul" type="none">
+        <li class="p-1"><a href="#"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a></li>
+        <li class="p-1"><a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+        <li class="p-1"><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
+        <li class="p-1"><a href="#"><i class="fa-brands fa-pinterest-p" style="color: #ffffff;"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- lizara navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #ffffff;">
+    <div class="container-fluid">
+        <!-- Logo and Heading Section -->
+        <div style="display: flex; align-items: center; gap: 20px; padding-left: 20px;">
+            <a class="navbar-brand" href="#">
+                <img width="120px" height="120px" src="https://scontent.fcok4-1.fna.fbcdn.net/v/t39.30808-1/284702706_107684228626280_4969446000244040217_n.jpg?stp=dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=DVUQ4_7KH1UQ7kNvgGgvCJG&_nc_ht=scontent.fcok4-1.fna&oh=00_AYBVQcZsAeRVgKRKnfJYUwicJfyJnPoBm1oN13vbFCihMQ&oe=66D916B8" alt="">
+            </a>
+            <h1 class="Lizara" style=" margin: 0;">LIZARA </h1>
+        </div>
         
-    </nav>
+        <!-- Navbar Toggler for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links and Search Form -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: flex; justify-content: center; align-items: center; flex-grow: 1; " >
+            <ul  class="navbar-nav d-flex flex-row justify-content-center">
+                <li class="nav-item  p-3">
+                    <a class="nav-link active"  aria-current="page" href="#HOME1">Home</a>
+                </li>
+                <li class="nav-item fs-5 p-3">
+                    <a class="nav-link active" href="#aboutme12">About</a>
+                </li>
+                <li class="nav-item fs-5 p-3">
+                    <a class="nav-link active" href="#services123">Services</a>
+                </li>
+                <li class="nav-item fs-5 p-3">
+                    <a class="nav-link active" href="./Booking.html">Book</a>
+                </li>
+                <li class="nav-item fs-5 p-3">
+                    <a class="nav-link active" href="./contactus.html">ContactUs</a>
+
+            </ul>
+            <form class="d-flex" role="search" style="padding-left:0px;">
+                <button class="btn rounded-pill m-3" style="background-color: #84e3d1; color: white; width: 200px; height: 50px; padding: 0;">
+                    <a href="./login.html" style="color: white; display: block; width: 100%; height: 100%; text-align: center; line-height: 50px; text-decoration: none;">
+                        LOG OUT
+                    </a>
+                </button>
+                
+                
+                <button class="btn rounded-circle m-3" type="submit" style="border: 1px solid salmon;">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #f0a78e;"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Home -->
+  
+<section  id="HOME1" style="background-image: url('https://wallpapers.com/images/hd/4k-marble-background-y3feopeupar1euf2.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative;">
+  <div class="d-flex justify-content-evenly" style="margin-top: 70px;" >
+    <div class="d-flex justify-content-evenly">
+      <img src="https://html.designingmedia.com/bridely/assets/images/banner-img1.png" alt="" width="200px" height="250px" style="margin-top: 300px;">
+      <img id="first" class="p-5" src="https://html.designingmedia.com/bridely/assets/images/bridely-banner-left-img.png" alt="">
+    </div>
+    <div  style="margin-right: 300px;width:700px; padding-left: 50px; ">
+      <img src="https://html.designingmedia.com/bridely/assets/images/ring-icon-banner.png" alt="" height="100px"
+        width="100px" style="margin-left: 50px;"><br>
+      <h1 style="font-family: 'Sevillana', cursive;font-size: 80px;">Perfect Events <br> <span style="color: #f0a78e;font-family: 'Sevillana', cursive; font-size: 80px;">Made Easy!!</span></h1>
+      <p class="card-text" style="color: rgb(90, 88, 88);"> We bring your vision to life with seamless event planning and management, ensuring unforgettable experiences tailored to your needs. Let us handle the details, effortlessly."</p>
+      <button id="btn">
+        <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+            <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+        </svg>
+    
+        <span class="text">Make Resevations</span>
+    </button>
+   </div>
+</div>
+</section>
+
+
+
+
+<!-- about -->
+<section id="aboutme12" style="background-color: white; width: 100%; height: 800px; padding: 30px;">
+<div style="width:300px;position: absolute; bottom: 20px; margin-left: 1300px;">
+  <img src="https://html.designingmedia.com/bridely/assets/images/banner-img2.png" alt="">
+</div>
+
+<div  class="mt-5 d-flex justify-content-evenly" style="margin-right: 230px;margin-top: 60px;">
+  <div style="height: 500px;width: 600px;margin-left: 240px; padding-top: 100px;">
+  <p class="about fs-3" style="color: #f0a78e; font-size: 50px;">About Lizara</p>
+  <h1 class="about" style="font-size: 60px;">What We do, We do <br> With Passion</h1>
+  <p class="card-text" style="color: rgb(90, 88, 88) ; font-size: 25px;">At  <b>Lizara</b> , we bring your visions to life with passion and precision. Specializing in event management, we meticulously plan and execute every detail to create unforgettable experiences. From corporate events to personal celebrations, our dedicated team ensures that every moment reflects your unique style and exceeds your expectations. </p>
+  <button id="btn2">
+    Learn More
+    <div class="arrow-wrapper">
+        <div class="arrow"></div>
+
+    </div>
+ </button>
+  </div>
+
+      
+  <div style="height: 500px;width: 600px;padding-left: 150px; ">
+    <img src="https://html.designingmedia.com/bridely/assets/images/about-img1.png" alt="">
+    <img src="https://html.designingmedia.com/bridely/assets/images/about-img3.png" alt="" style="margin-top:30px;margin-left: 190px;">
+  </div>
+  <div style="width:300px;position: absolute;left: 880px;margin-top: 230px; ">
+    <img src="https://html.designingmedia.com/bridely/assets/images/about-img2.png" alt="">
+   </div>
+   <div style="width:300px;position: absolute;left: 700px;margin-top: 40px; ">
+    <img src="https://html.designingmedia.com/bridely/assets/images/about-bird-icon.png" alt="" height="150px" width="200px">
+   </div>
+
+</div>
+
+</section>
+
+
+<!-------------------------------- Vedio------------------------- -->
+
+
+<section style="background-image: url('https://wallpapers.com/images/hd/4k-marble-background-y3feopeupar1euf2.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative;">
+<div style="margin-top: 20px;text-align: center;">
+    <h1 class="about" style="font-size: 70px;"> "Watch Our Event Management Magic in Action!" </h1><br><br>
+  <img src="https://html.designingmedia.com/bridely/assets/images/video-img.png" alt="">
+  <a href="https://cdn.pixabay.com/video/2023/11/13/189020-884234925_tiny.mp4" style="position: absolute;right:800px;margin-top: 200px;"><img src="https://html.designingmedia.com/bridely/assets/images/video-play-icon.png" alt=""></a>
+  <br><br><br>
+</div>
+</section>
+
+
+
+
+
+
+
+<!------------------------- Product Categories ------------------->
+
+
+
+<section style="background-color: white; width: 100%; height: 800px; padding: 20px;">
+
+<div class="d-flex justify-content-center " style="margin-top: 200px; width: 100%;">
+  <div style="height: 500px;width: 600px;text-align:center ; ">
+  <img src="https://html.designingmedia.com/bridely/assets/images/categories-logo-img.png" alt="" ><br><br><br>
+  <h1 class="about" style="font-size: 60px;">Includes Various <br> Product Categories</h1>
+  <p class="card-text" style="color: rgb(90, 88, 88);">"Explore a diverse range of event categories expertly managed to meet your unique needs. Whether it's a wedding, corporate gathering, birthday party, or workshop, our dedicated team ensures every detail is handled with precision and care. From seamless planning to flawless execution, we offer tailored solutions to make your event unforgettable and stress-free." </p>
+  <button id="btn2" style="margin-left: 210px;">
+    Learn More
+    <div class="arrow-wrapper">
+        <div class="arrow"></div>
+    </div>
+ </button>
+ </div>
+
+
+  <div  style="height: 500px;width: 600px;">
+    <div class="d-flex justify-content-evenly">
+      <img class="m-4" src="https://html.designingmedia.com/bridely/assets/images/categories-img2.png" alt="">
+      <img class="m-3" src="https://html.designingmedia.com/bridely/assets/images/categories-img3.png" alt="">
+    </div>
+    <div class="d-flex justify-content-evenly">
+      <img class="m-2" src="https://html.designingmedia.com/bridely/assets/images/categories-img4.png" alt="">
+      <img class="m-2" src="https://html.designingmedia.com/bridely/assets/images/categories-img5.png" alt="">
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+
+
+<!-- ------------------------Wedding Program ----------------------------->
+
+<section style="background-image: url('https://wallpapers.com/images/hd/4k-marble-background-y3feopeupar1euf2.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative;">
+<div style="text-align: center; margin: 150px;">
+  <img src="https://html.designingmedia.com/bridely/assets/images/reservation-logo.png" alt=""><br><br><br>
+  <h1 class="about" style="font-size: 80px;">The Unrivaled Scenery, Unforgettable <br> Wedding Program</h1>
+
+<div class="d-flex justify-content-center mt-5">
+  <div><img class="m-3" src="https://html.designingmedia.com/bridely/assets/images/reservation-img1.png" alt=""></div>
+  <div>
+    <img class="m-3" src="https://html.designingmedia.com/bridely/assets/images/reservation-img2.png" alt=""><br>
+    <img class="m-3" src="https://html.designingmedia.com/bridely/assets/images/reservation-img3.png" alt="">
+  </div>
+</div>
+<button id="btn" style="margin-left: 600px;margin-top: 40px;">
+  <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+      <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+  </svg>
+
+  <a href="./Booking.html" class="text" style="text-decoration: none; color:  white;">
+    <span>Make Reservations</span>
+</a>
+
+</button>
+</div>
+</section>
+
+
+
+
+<!-------------------------------------------- Colour box -------------------->
+
+<section  style="background-color: white; width: 100%; height: 100vh; padding: 2vw; display: flex; flex-direction: column; align-items: center;">
+    <!-- First Div Centered -->
+    <div  style="background-color:  #f0a78e; color: white; padding: 2vw; border-radius: 15px; display: flex; justify-content: space-around; align-items: center; width: 70%; position: relative; text-align: center; margin: 0 auto 5vh auto;">
+        <div  style="text-align: center; margin-right: 2vw;">
+            <div style="font-size: 4vw; font-weight: bold;">1565+</div>
+            <div style="font-size: 1.5vw;">Weddings</div>
+        </div>
+        <div style="height: 5vh; width: 0.1vw; background-color: white;"></div>
+        <div style="text-align: center; margin-left: 2vw; margin-right: 2vw;">
+            <div style="font-size: 4vw; font-weight: bold;">1680+</div>
+            <div style="font-size: 1.5vw;">Birthday Parties</div>
+        </div>
+        <div style="height: 5vh; width: 0.1vw; background-color: white;"></div>
+        <div style="text-align: center; margin-left: 2vw; margin-right: 2vw;">
+            <div style="font-size: 4vw; font-weight: bold;">845+</div>
+            <div style="font-size: 1.5vw;">Corporate Events</div>
+        </div>
+        <div style="height: 5vh; width: 0.1vw; background-color: white;"></div>
+        <div style="text-align: center; margin-left: 2vw;">
+            <div style="font-size: 4vw; font-weight: bold;">175+</div>
+            <div style="font-size: 1.5vw;">Workshops and Seminars</div>
+        </div>
+        <div style="width: 4vw; height: 5vw; background-color: #f0a78e; position: absolute; bottom: -2.4vh; left: 45%; transform: translateX(-50%) rotate(45deg);"></div>
+    </div>
+
+    <!-- Second Div with Responsive Width and Height -->
+    <div style="background-color: #ffffff; padding: 4vw; border-radius: 15px; width: 90%; display: flex; align-items: center; justify-content: space-between;">
+        <!-- Left Section -->
+        <div style="width: 50%; padding-right: 4vw; position: relative;">
+            <!-- Image -->
+            <img src="https://html.designingmedia.com/bridely/assets/images/about-bird-icon.png" alt="Bird Icon" style="position: absolute; top: -10vw; left: -6vw; width: 8vw; height: auto;"/>
+            <div class="about" style="color:  #f0a78e; font-weight: bold; margin-bottom: 1vw; font-size: 1.8vw;">
+                Lizara Fun Facts
+            </div>
+            <h2 class="about" style="font-size: 3.5vw; color: #333333; margin-bottom: 2vw;">Explore Our Event Management Services</h2>
+            <p  class="card-text" style="color: #777777; font-size: 1.5vw;">Discover our commitment to excellence in event planning and management.</p>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="box1" style="width: 45%;">
+            <!-- Progress Bar 1 -->
+            <div   style="margin-bottom: 1.5vw;">
+                <div  style="display: flex; justify-content: space-between;">
+                    <span style="font-weight: bold; color: #333; font-size: 1.5vw;">Expertise</span>
+                    <span style="color: #777; font-size: 1.2vw;">85%</span>
+                </div>
+                <div style="background-color: #d9d9d9; height: 0.8vw; border-radius: 4px; margin-top: 0.5vw;">
+                    <div style="width: 85%; height: 100%; background-color: #8bc4c8; border-radius: 4px;"></div>
+                </div>
+            </div>
+            <!-- Progress Bar 2 -->
+            <div style="margin-bottom: 1.5vw;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="font-weight: bold; color: #333; font-size: 1.5vw;">Custom Event Solutions</span>
+                    <span style="color: #777; font-size: 1.2vw;">70%</span>
+                </div>
+                <div style="background-color: #d9d9d9; height: 0.8vw; border-radius: 4px; margin-top: 0.5vw;">
+                    <div style="width: 70%; height: 100%; background-color: #8bc4c8; border-radius: 4px;"></div>
+                </div>
+            </div>
+            <!-- Progress Bar 3 -->
+            <div style="margin-bottom: 1.5vw;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="font-weight: bold; color: #333; font-size: 1.5vw;">Experience and Quality</span>
+                    <span style="color: #777; font-size: 1.2vw;">90%</span>
+                </div>
+                <div style="background-color: #d9d9d9; height: 0.8vw; border-radius: 4px; margin-top: 0.5vw;">
+                    <div style="width: 90%; height: 100%; background-color: #8bc4c8; border-radius: 4px;"></div>
+                </div>
+            </div>
+            <!-- Progress Bar 4 -->
+            <div style="margin-bottom: 1.5vw;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="font-weight: bold; color: #333; font-size: 1.5vw;">Client Satisfaction</span>
+                    <span style="color: #777; font-size: 1.2vw;">80%</span>
+                </div>
+                <div style="background-color: #d9d9d9; height: 0.8vw; border-radius: 4px; margin-top: 0.5vw;">
+                    <div style="width: 80%; height: 100%; background-color: #8bc4c8; border-radius: 4px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ----------------------------------Our Services -->
+
+<section id="services123" style="background-image: url('https://wallpapers.com/images/hd/4k-marble-background-y3feopeupar1euf2.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative;">
+
+   
+  <!-- Heading -->
+<div class="about">
+    <h2 class="about" style="font-size:75px; color: #333333; margin-bottom: 2vw; text-align: center;padding-top: 40px;">Our Services</h2>
+</div>
+<!-- Buttons -->
+<div class="container mb-4" style="font-size: 10px;">
+    <ul class="nav nav-pills justify-content-center" style="display: flex; flex-wrap: nowrap; padding: 0; margin: 0;">
+      <li class="nav-item" style="flex: 1;">
+        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" style="background-color: #91DDCF; width: 200px; height: 50px; border-radius: 30px; font-size: 20px; margin-right: 10px; text-align: center;">All</button>
+      </li>
+      <li class="nav-item" style="flex: 1;">
+        <button class="nav-link" id="pills-birthday-tab" data-bs-toggle="pill" data-bs-target="#pills-birthday" type="button" role="tab" style="background-color: #f0a78e; width: 200px; height: 50px; border-radius: 30px; font-size: 20px; margin-right: 10px; text-align: center;">Birthday Parties</button>
+      </li>
+      <li class="nav-item" style="flex: 1;">
+        <button class="nav-link" id="pills-photography-tab" data-bs-toggle="pill" data-bs-target="#pills-photography" type="button" role="tab" style="background-color: #f0a78e; width: 250px; height: 50px; border-radius: 30px; font-size: 20px; margin-right: 10px; text-align: center;">Photography Sessions</button>
+      </li>
+      <li class="nav-item" style="flex: 1;">
+        <button class="nav-link" id="pills-weddings-tab" data-bs-toggle="pill" data-bs-target="#pills-weddings" type="button" role="tab" style="background-color: #f0a78e; width: 200px; height: 50px; border-radius: 30px; font-size: 20px; margin-right: 10px; text-align: center;">Weddings</button>
+      </li>
+      <li class="nav-item" style="flex: 1;">
+        <button class="nav-link" id="pills-corporate-tab" data-bs-toggle="pill" data-bs-target="#pills-corporate" type="button" role="tab" style="background-color: #f0a78e; width: 200px; height: 50px; border-radius: 30px; font-size: 20px; margin-right: 10px; text-align: center;">Corporate Events</button>
+      </li>
+      <li class="nav-item" style="flex: 1;">
+        <button class="nav-link" id="pills-workshops-tab" data-bs-toggle="pill" data-bs-target="#pills-workshops" type="button" role="tab" style="background-color: #f0a78e; width: 250px; height: 50px; border-radius: 30px; font-size: 20px; text-align: center;">Workshops & Seminars</button>
+      </li>
+    </ul>
+  </div>
+  
+
+<!-- Cards -->
+<div class="container">
+   <div class="tab-content" id="pills-tabContent">
+       <!-- All Cards -->
+       <div class="tab-pane fade show active" id="pills-all" role="tabpanel">
+           <div class="row gy-4">
+               <!-- Birthday Parties Cards -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/3234124/pexels-photo-3234124.jpeg" class="card-img-top" alt="Birthday Party Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrating Your 1st Year!"</h5> <br>
+                           <p class="card-text">"In just one year, you've filled our hearts with immense joy and love. Today, we celebrate your first birthday with endless smiles and cherished moments. Happy 1st Birthday, little one!"</p><br>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/7180617/pexels-photo-7180617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Birthday Party Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Friend's Special Day with Us!"</h5>
+                           <p class="card-text">"Make your friend's birthday unforgettable with our expert event services. From decor to catering, we'll handle everything so you can enjoy the celebration. Let's make memories together!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                        
+                       </div>
+                   </div>
+               </div>
+               
+
+               <!-- Photography Sessions Cards -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.squarespace-cdn.com/content/v1/61154884da547218fd0e9bad/fba07698-6f83-49ff-99ec-e436a237342f/Lisa-Bjork-Joyful-Fun-Wedding-Photographer-Lapland-006.jpg?format=500w" class="card-img-top" alt="Photography Session Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Event Date Announced!"</h5><br>
+                           <p class="card-text">"Mark your calendars for an unforgettable event! Join us on [Date] for a celebration filled with joy, excitement, and exceptional service. Stay tuned for more details. We can't wait to see you!"</p><br>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://www.frankbernasekphotography.com/wp-content/uploads/sites/5054/2021/09/Ohana-Package-90-Minutes-image-6.jpg?auto=compress,format&fit=max&w=750&h=695" class="card-img-top" alt="Photography Session Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Capture Your Family Moments with <br>Us"</h5>
+                           <p class="card-text">"Preserve your family's cherished memories with our professional photography services. From candid shots to posed portraits, we'll capture the love and joy in every moment of your special event."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Weddings Cards -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/3292697/pexels-photo-3292697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Wedding Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Intimate Wedding with <br> Us"</h5>
+                           <p class="card-text">"Craft your perfect, heartfelt wedding day with our bespoke event services. We specialize in creating memorable, intimate celebrations that reflect your unique love story. Let us make it magical!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/26965598/pexels-photo-26965598/free-photo-of-newlyweds-walking-among-guests-after-wedding.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Wedding Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Christian Wedding with Grace and Joy"</h5>
+                           <p class="card-text">"Experience a divine union with our event services, tailored to honor your Christian wedding. From sacred vows to elegant receptions, we ensure every moment reflects the love and faith of your special day."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+                            <!-- Corporate Event 1 -->
+                <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Corporate Event Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrating 10 Remarkable Years with Luminar!"</h5>
+                           <p class="card-text">"Join us as we mark a decade of excellence with Luminar! Discover exceptional event services and relive our journey of innovation and success. Here’s to many more years of unforgettable events and achievements!"</p><br>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Corporate Event 2 -->
+                <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/18999533/pexels-photo-18999533/free-photo-of-group-of-people-listening-intently-to-a-presentation.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Corporate Event Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Elevate Your Business with Our Premier Event Services"</h5>
+                           <p class="card-text">"Transform your corporate gatherings into unforgettable experiences with our expert event services. From seamless planning to flawless execution, we ensure every detail aligns with your vision, making your event a standout success."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 1 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/3856026/pexels-photo-3856026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Workshop Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Innovative Workshops to Transform "</h5>
+                           <p class="card-text">"Join us for informative seminars and hands-on workshops designed to enhance your skills and knowledge. Our expert-led sessions offer valuable insights and practical experience, perfect for professional growth and networking opportunities."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               
+           </div>
+       </div>
+
+       <!-- Birthday Parties Cards -->
+       <div class="tab-pane fade" id="pills-birthday" role="tabpanel">
+           <div class="row gy-4">
+               <!-- Card 1 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/1405528/pexels-photo-1405528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Birthday Party Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate a Lifetime of Memories with Us!"</h5>
+                           <p class="card-text">"Honor a cherished milestone with our expert event services. We’ll craft a heartfelt  of achievements and creates new, unforgettable moments for your loved one."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/7180617/pexels-photo-7180617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Birthday Party Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Friend's Special Day with Us!"</h5>
+                           <p class="card-text">"Make your friend's birthday unforgettable with our expert event services. From decor to catering, we'll handle everything so you can enjoy the celebration. Let's make memories together!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/3234124/pexels-photo-3234124.jpeg" class="card-img-top" alt="Birthday Party Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrating Your 1st Year!"</h5>
+                           <p class="card-text">"In just one year, you've filled our hearts with immense joy and love. Today, we celebrate your first birthday with endless smiles and cherished moments. Happy 1st Birthday, little one!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Photography Sessions Cards -->
+       <div class="tab-pane fade" id="pills-photography" role="tabpanel">
+           <div class="row gy-4">
+               <!-- Card 1 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://www.lisabjork.com/wp-content/uploads/2021/02/Brollopsfotograf-Norrbotten-rODBERGSFORTET.jpg" class="card-img-top" alt="Photography Session Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Capture Your Love Story with Stunning Wedding Photography"</h5>
+                           <p class="card-text">"Transform your special day into timeless memories with our expert wedding photography. We craft beautiful, personalized images that reflect the essence of your love and celebration."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://www.frankbernasekphotography.com/wp-content/uploads/sites/5054/2021/09/Ohana-Package-90-Minutes-image-6.jpg?auto=compress,format&fit=max&w=750&h=695" class="card-img-top" alt="Photography Session Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Capture Your Family Moments with <br>Us"</h5>
+                           <p class="card-text">"Preserve your family's cherished memories with our professional photography services. From candid shots to posed portraits,  joy in every moment of your special event."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 3 -->
+
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.squarespace-cdn.com/content/v1/61154884da547218fd0e9bad/fba07698-6f83-49ff-99ec-e436a237342f/Lisa-Bjork-Joyful-Fun-Wedding-Photographer-Lapland-006.jpg?format=500w" class="card-img-top" alt="Photography Session Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Event Date <br>Announced!" <br></h5>
+                           <p class="card-text">"Mark your calendars for an unforgettable event! Join us on  From seamless planning to unforgettable experiencesfor a celebration filled with  excitement, and exceptional service. Stay tuned for more details. We can't wait to see you!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Weddings Cards -->
+       <div class="tab-pane fade" id="pills-weddings" role="tabpanel">
+           <div class="row gy-4">
+               <!-- Card 1 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/3292697/pexels-photo-3292697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Wedding Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Intimate Wedding with <br> Us"</h5>
+                           <p class="card-text">"Craft your perfect, heartfelt wedding day with our bespoke event services. We specialize in creating memorable, intimate celebrations that reflect your unique love story. Let us make it magical!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/26965598/pexels-photo-26965598/free-photo-of-newlyweds-walking-among-guests-after-wedding.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Wedding Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Christian Wedding with Grace and Joy"</h5>
+                           <p class="card-text">"Experience a divine union with our event services, tailored to honor your Christian wedding. From sacred vows to elegant receptions, we ensure every moment reflects the love and faith of your special day."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/18881689/pexels-photo-18881689/free-photo-of-bride-and-groom-during-traditional-weeding-ceremony.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Wedding Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrate Your Hindu Wedding with Traditional Elegance"</h5>
+                           <p class="card-text">"Immerse in the beauty of a Hindu wedding with our expert services. From vibrant ceremonies to detailed rituals, the love and faith of your special daywe ensure every aspect is thoughtfully crafted for your joyous celebration."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Corporate Events Cards -->
+       <div class="tab-pane fade" id="pills-corporate" role="tabpanel">
+           <div class="row gy-4">
+               <!-- Card 1 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Corporate Event Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Celebrating 10 Remarkable Years with Luminar!"</h5>
+                           <p class="card-text">"Join us as we mark a decade of excellence with Luminar! Discover exceptional event services and relive our journey of innovation and success. Here’s to many more years of unforgettable events and achievements!"</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/18999533/pexels-photo-18999533/free-photo-of-group-of-people-listening-intently-to-a-presentation.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Corporate Event Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Elevate Your Business with Our Premier Event Services"</h5>
+                           <p class="card-text">"Transform your corporate gatherings into unforgettable experiences with our expert event services. From seamless planning to flawless execution, we ensure every detail aligns with your vision, making your event a standout success."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Corporate Event Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">Executive Event Our Premier <br>Excellence</h5>
+                           <p class="card-text">"Experience exceptional corporate events designed for executives. Our expert team provides seamless planning and execution, creating sophisticated and effective events that make a lasting impression."</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- Workshops and Seminars Cards -->
+       <div class="tab-pane fade" id="pills-workshops" role="tabpanel">
+           <div class="row gy-4">
+               <!-- Card 1 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Workshop Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Master Essential Skills with Our Workshops"</h5>
+                           <p class="card-text">Enhance your expertise with hands-on workshops led by industry experts. Gain valuable knowledge and practical skills in a dynamic, interactive environment designed for personal and professional growth.</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/8761336/pexels-photo-8761336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Workshop Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Unlock Your Potential at Our Seminars" </h5>
+                           <p class="card-text">Dive into our engaging seminars focused on personal development and career advancement. Learn from thought leaders and gain insights that will propel your success and inspire your journey. </p><br>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="col-lg-4 col-sm-6">
+                   <div class="card menu-card">
+                       <img src="https://images.pexels.com/photos/3856026/pexels-photo-3856026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Workshop Image">
+                       <div class="card-body menu-card-content">
+                           <h5 class="card-title">"Innovative Workshops to Transform "</h5>
+                           <p class="card-text">Join our innovative workshops to explore cutting-edge topics and practical techniques. Empower yourself with new skills and strategies that drive career success and personal achievement in a collaborative setting.</p>
+                           <a href="./Booking.html" style="text-decoration: none;">
+                            <button style="background-color:#91DDCF; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                                BOOK NOW
+                            </button>
+                        </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   </div>
+</div>
+<br><br><br><br><br>
+</section>
+
+
+
+
+<!------------------------------- Let’s Plan Your Next Event Together -->
+<section style="background-color: #ffffff;width: auto; height: 700px;padding-top: 80px;">
+    <!-- Event-Together-Section -->
+    <section class="event-section overflow-hidden position-relative">
+       <div class="container">
+           <div style="display: table; width: 100%; border-collapse: collapse;">
+               <!-- Left Side: Images -->
+               <div style="display: table-cell; width: 50%; padding: 15px; margin-top: 50px; vertical-align: middle;"> <!-- Added vertical-align -->
+                   <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 20px;">
+                       <!-- Image 1 -->
+                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                           <figure style="margin: 0; text-align: center;">
+                               <img src="https://html.designingmedia.com/bridely/assets/images/event-img1.png" alt="Entertainment" style="width: 100%; max-width: 150px; margin-bottom: 10px;">
+                               <h6 class="card-text" style="margin: 0;text-align: center;">Entertainment</h6>
+                           </figure>
+                       </div>
+                       <!-- Image 2 -->
+                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                           <figure style="margin: 0; text-align: center;">
+                               <img src="https://html.designingmedia.com/bridely/assets/images/event-img3.png" alt="Dining" style="width: 100%; max-width: 150px; margin-bottom: 10px;">
+                               <h6 class="card-text" style="margin: 0;text-align: center;">Dining</h6>
+                           </figure>
+                       </div>
+                       <!-- Image 3 -->
+                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                           <figure style="margin: 0; text-align: center;">
+                               <img src="https://html.designingmedia.com/bridely/assets/images/event-img2.png" alt="Decor" style="width: 100%; max-width: 150px; margin-bottom: 10px;">
+                               <h6 class="card-text" style="margin: 0;text-align: center;">Decor</h6>
+                           </figure>
+                       </div>
+                       <!-- Image 4 -->
+                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                           <figure style="margin: 0; text-align: center;">
+                               <img src="https://html.designingmedia.com/bridely/assets/images/event-img4.png" alt="Swag & Gifting" style="width: 100%; max-width: 150px; margin-bottom: 10px;">
+                               <h6 class="card-text" style="margin: 0; text-align: center;">Swag & Gifting</h6>
+                           </figure>
+                       </div>
+                   </div>
+               </div>
+    
+               <!-- Right Side: Content -->
+               <div style="display: table-cell; width: 50%; padding: 15px; vertical-align: middle;"> <!-- Added vertical-align -->
+                   <div style="display: flex; flex-direction: column; height: 100%; justify-content: center;">
+                       <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
+                           <!-- Top Image -->
+                           <div style="text-align: center; margin-bottom: 20px;">
+                               <img src="https://html.designingmedia.com/bridely/assets/images/event-design-logo.png" alt="Event Design Logo" style="width: 100%; max-width: 200px;">
+                           </div>
+                           <h2 class="about" style="font-size: 3.5vw; color: #333333; margin-bottom: 2vw;">Let’s Plan Your Next Event Together</h2>
+                       
+                           <p class="card-text">"Whether you're organizing a grand celebration or an intimate gathering, we're here to make your vision a reality. Our team of experienced professionals will handle every detail, from décor to dining, ensuring a seamless and memorable event. Let us bring your dream event to life, tailored perfectly to your needs."</p>
+                           <center> <a href="./Booking.html"><button  style="background-color:transparent;  color:rgb(246, 150, 159); border-radius: 20px;width: 150px; height:50px; border-color: #f0a78e">BOOK NOW</button></a></center>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </section>
+</section>
+
+
+
+
+
+
+
+
+
+<!-------------------------------- Creative Event Organizer -->
+<section style="background-image: url('https://wallpapers.com/images/hd/4k-marble-background-y3feopeupar1euf2.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative; ">
+
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; height: 800px;">
+
+   <!-- Section Header -->
+<div style="text-align: left; max-width: 600px; margin-top: 150px;"> 
+<img src="https://html.designingmedia.com/bridely/assets/images/categories-logo-img.png" alt="Event Organizer Logo" style="display: block; margin: 0 auto 20px;">
+<h2 class="about" style="font-size: 80px; color: #333333; margin-bottom: 2vw;">Meet Our Creative Event Organizer</h2>
+
+<p class="card-text" style="color: #666; font-size: 16px; margin: 10px 0;">
+   Discover the faces behind the magic of our events. Our team of creative event organizers is dedicated to bringing your vision to life with unparalleled creativity and meticulous planning. From intimate gatherings to grand celebrations, they ensure every detail is perfectly executed.
+   <br><br>
+   Each organizer on our team brings a unique set of skills and experiences, working tirelessly to make your event memorable and seamless. With a passion for excellence and a keen eye for detail, they transform ideas into extraordinary experiences.
+   <br><br>
+   Get to know our talented team and see how their expertise can make your next event truly special.
+</p>
+<center> 
+    <button id="btn2">
+        Learn More
+        <div class="arrow-wrapper">
+            <div class="arrow"></div>
+    
+        </div>
+     </button>
+</center>
+</div>
+
+
+   <!-- Organizer Cards -->
+   <div id="organizerscard" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; flex-grow: 1; padding-left: 20px;">
+       <!-- Card 1 -->
+       <div style="background-color: rgb(255, 255, 255); border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; padding: 10px; max-width: 300px;height: 350px;">
+           <img src="https://html.designingmedia.com/bridely/assets/images/event-org-img1.png" alt="Alisha Rees" style="width: 100%; height: auto; border-radius: 0px;">
+           <div style="margin-top: -20px; margin-bottom: 10px;">
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/facebook.png" alt="Facebook" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/twitter.png" alt="Twitter" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/instagram-new.png" alt="Instagram" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+           </div>
+           <h3 class="event" style="margin: 0; color: #333;">Alisha Rees</h3>
+           <p class="card-text" style="color: #666; font-size: 16px; margin: 10px 0; text-align: center;"> Chief Event Planner </p>
+       </div>
+       <!-- Card 2 -->
+       <div style="background-color: rgb(255, 255, 255); border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; padding: 10px; max-width: 300px;height: 350px;">
+           <img src="https://html.designingmedia.com/bridely/assets/images/event-org-img2.png" alt="Rhys Carter" style="width: 100%; height: auto; border-radius: 10px;">
+           <div style="margin-top: -20px; margin-bottom: 10px;">
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/facebook.png" alt="Facebook" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/twitter.png" alt="Twitter" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/instagram-new.png" alt="Instagram" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+           </div>
+           <h3 class="event" style="margin: 0;  color: #333;">Rhys Carter</h3>
+           <p class="card-text" style="color: #666; font-size: 16px; margin: 10px 0; text-align: center;"> Event Designer </p>
+       </div>
+       <!-- Card 3 -->
+       <div style="background-color: rgb(255, 255, 255); border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; padding: 10px; max-width: 300px;height: 350px;">
+           <img src="https://html.designingmedia.com/bridely/assets/images/event-org-img3.png" alt="Kyle Buckley" style="width: 100%; height: auto; border-radius: 10px;">
+           <div style="margin-top: -20px; margin-bottom: 10px;">
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/facebook.png" alt="Facebook" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/twitter.png" alt="Twitter" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/instagram-new.png" alt="Instagram" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+           </div>
+           <h3 class="event" style="margin: 0; color: #333;">Kyle Buckley</h3>
+           <p class="card-text" style="color: #666; font-size: 16px; margin: 10px 0; text-align: center;"> Creative Event Director </p>
+           
+       </div>
+       <!-- Card 4 -->
+       <div style="background-color: rgb(255, 255, 255); border-radius: 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; padding: 10px; max-width: 300px;height: 350px;">
+           <img src="https://html.designingmedia.com/bridely/assets/images/event-org-img4.png" alt="Maisie Walton" style="width: 100%; height: auto; border-radius: 10px;">
+           <div style="margin-top: -20px; margin-bottom: 10px;">
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/facebook.png" alt="Facebook" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/twitter.png" alt="Twitter" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+               <a href="#" style="margin: 0 5px; text-decoration: none;">
+                   <img src="https://img.icons8.com/ios-glyphs/30/fa314a/instagram-new.png" alt="Instagram" style="background-color: #f4a7a2; padding: 5px; border-radius: 50%; width: 40px;">
+               </a>
+           </div>
+           <h3 class="event" style="margin: 0;  color: #333;">Maisie Walton</h3>
+           <p class="card-text" style="color: #666; font-size: 16px; margin: 10px 0; text-align: center;"> Event Marketing Director </p>
+
+
+       </div>
+   </div>
+</div>
+</section>
+
+<!-- 60th Birthday -----------------------------------------------  -->
+
+
+<section style="position: relative; padding: 50px; background-color: #fefefe;">
+    <div style="display: flex; align-items: center; justify-content: space-between; position: relative;">
+      <!-- Left Side - Text and Image -->
+      <div style="flex: 1; max-width: 60%; z-index: 4; position: center; padding-right: 20px;">
+        <figure style="margin-bottom: 20px;">
+          <img src="https://html.designingmedia.com/bridely/assets/images/about-bird-icon.png" alt="Bird Icon" style="width: 150px;padding-left: 20px;">
+        </figure>
+        <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);">
+          <figure style="margin-bottom: 20px;">
+            <img src="https://html.designingmedia.com/bridely/assets/images/story-card-img.png" alt="Quote Icon" style="width: 50px;margin-left: px;">
+          </figure>
+          <h2 class="about" style="font-size: 60px; color: #333333; margin-bottom: 2vw;">Celebrating 3 Milestones: A Triple <b> 60th</b> Birthday Bash!</h2>
+          <p class="card-text" style="color: #666; font-size: 16px; margin: 10px 0; text-align: center;">
+            "Join us for a heartwarming celebration as we honor three remarkable individuals reaching their 60th birthday milestones. This special event brings together family and friends for a joyful gathering filled with love, laughter, and cherished memories. Enjoy a festive atmosphere with delicious food, lively music, and a touching tribute to their six decades of life. Be a part of this unforgettable occasion as we celebrate the wisdom, achievements, and enduring spirit of these extraordinary people. Don’t miss out on this once-in-a-lifetime celebration!"
+          </p>
+          <div style="margin-top: 30px;">
+            <a href="about.html" style="text-decoration: none; color: #00a1d6; font-weight: 600; font-size: 16px; display: inline-flex; align-items: center;">
+                <button id="btn2">
+                    "Check Event Details"
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                
+                    </div>
+                </button>
+           </a>
+         </div>
+       </div>
+     </div>
+     <!-- Right Side - Image -->
+     <div style="flex: 1; max-width: 60%; position: relative; z-index: 1; margin-left: -10%; margin-right: 20px;">
+       <img src="https://images.pexels.com/photos/7561326/pexels-photo-7561326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Wedding Image" style="width:1000px; border-radius: 10px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);margin-top: 70px;">
+       <div style="position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%); display: flex; gap: 20px;">
+         
+       </div>
+     </div>
+   </div>
+  </section>
+
+
+  <!-- Make Reservations ------------------------------------------>
+  
+<section id="reserv" style="background-image: url('https://wallpapers.com/images/hd/4k-marble-background-y3feopeupar1euf2.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative; ">
+
+  <div style="display: flex; flex-wrap: wrap; align-items: center;  padding: 20px; margin: 20px;">
+    <!-- Image Section -->
+    <div style="flex: 1; min-width: 250px; margin-right: 30px;"> <!-- Adjusted margin-right for more gap -->
+      <img src="https://html.designingmedia.com/bridely/assets/images/form-section-img1.png" alt="Description of Image" style="width: 100%; max-width: 700px; height: auto; border-radius: 8px; margin-left: 40px;">
+    </div>
+    
+   <!-- Form Section -->
+<div style="flex: 1; padding: 15px;  max-width: 700px; margin-right: 50px;">
+  
+    <h2 class="about" style="font-size: 80px; color: #333333; margin-bottom: 10px; text-align: center;">Make Reservations</h2>
+    <p class="card-text" style="color: #666; font-size: 22px; margin: 10px 0;">
+      
+      
+"Reserve your spot effortlessly for our events. Choose your date, provide details, and enjoy seamless event planning with us!"
+    </p>
+  
+    <form style="display: flex; flex-direction: column; gap: 15px;">
+        <!-- Row 1: Name and Email -->
+        <div style="display: flex; gap: 15px;">
+          <div style="flex: 1;">
+            <label class="card-text"  style="display: block; margin-bottom: 5px;">Your Name:</label>
+            <input class="card-text" type="text" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;">
+          </div>
+          <div  style="flex: 1;">
+            <label class="card-text" style="display: block; margin-bottom: 5px;">Your Email:</label>
+            <input type="email" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;">
+          </div>
+        </div>
+      
+        <!-- Row 2: Phone Number, Guests, and Date -->
+        <div style="display: flex; gap: 15px;">
+          <div style="flex: 1;">
+            <label class="card-text" style="display: block; margin-bottom: 5px;">Phone Number:</label>
+            <input type="tel" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;">
+          </div>
+          <div style="flex: 1;">
+            <label class="card-text" style="display: block; margin-bottom: 5px;">Number of Guests:</label>
+            <input type="number" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;">
+          </div>
+          <div style="flex: 1;">
+            <label class="card-text" style="display: block; margin-bottom: 5px;">Event Date:</label>
+            <input class="card-text"  type="date" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;">
+          </div>
+        </div>
+      
+        <!-- Event Selection -->
+        <div>
+          <label class="card-text" style="display: block; margin-bottom: 5px;">Type of Event:</label>
+          <select class="card-text" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;">
+            <option class="card-text" value="option1">Birthday</option>
+            <option class="card-text" value="option2">Wedding</option>
+            <option class="card-text" value="option3">
+              Corporate Events</option>
+          </select>
+        </div>
+        
+        <!-- Location -->
+        <div>
+          <label class="card-text" style="display: block; margin-bottom: 5px;">Location:</label>
+          <input class="card-text" type="text" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px;" placeholder="Enter location">
+        </div>
+        
+        <!-- Special Requests -->
+        <div>
+          <label class="card-text" style="display: block; margin-bottom: 5px;">Special Requests:</label>
+          <textarea class="card-text" style="padding: 8px; border: 1px solid #ccc; width: 100%; border-radius: 4px; resize: vertical;" rows="4" placeholder="Enter any special requests or requirements"></textarea>
+        </div>
+      
+        <!-- Submit Button -->
+        <button id="btn" style="margin-left: 200PX;">
+          <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+              <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+          </svg>
+      
+          <span class="text">Make Resevations</span>
+      </button>
+      </form>
+  </div>
+</section>
+
+
+<!-- ----------------------------------------------Instagram Feeds -->
+<section id="instagram123" style="background-color: white; width: 100%; max-width: 100%;">
+    <div style="text-align: center; padding-top: 40px;" class="flex flex-col justify-center items-center h-full">
+        <h1 class="card-text" style="text-align: center; font-size: 80px;" class="text-2xl font-bold mb-4">Instagram Feed</h1>
+        <img src="https://html.designingmedia.com/bridely/assets/images/insta-icon.png" alt="insta" class="w-16 h-16">
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;margin-top: 30px;">
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/18992767/pexels-photo-18992767/free-photo-of-girl-in-green-dress-sitting-with-birthday-cake-balloons-and-wishes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"> <i class="fa-brands fa-instagram"> </i> LIZARA
+                </div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image 2" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 5" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/57980/pexels-photo-57980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 6" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/2399097/pexels-photo-2399097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 7" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/518389/pexels-photo-518389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 8" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/2788492/pexels-photo-2788492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 9" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+            <div class="image-container" style="flex: 1 1 calc(25% - 20px); max-width: calc(25% - 20px);">
+                <img src="https://images.pexels.com/photos/2716728/pexels-photo-2716728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 10" class="image" style="width: 100%; height: auto;">
+                <div class="text-overlay"><i class="fa-brands fa-instagram"> </i> LIZARA</div>
+            </div>
+        </div>
+</section>
+
+<section style="background-image: url('https://html.designingmedia.com/bridely/assets/images/footer-background-img.jpg'); background-size: cover; background-position: center; padding: 50px; position: relative; height: 1200px; display: flex; justify-content: center; align-items: flex-end;">
+    
+</section>
+
+
+<!-- Container for Heading and Buttons -->
+<div style="text-align: center; margin-bottom: 50px; background-color: white; height: 200px;">
+    <!-- Main Heading and Subheading -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <h1 class="card-text" style="font-size: 80px;  margin-bottom: 10px;" class="text-2xl font-bold">Let’s Start Planning!</h1>
+  
+    </div>
+
+    <!-- Buttons -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <button id="btn" style="display: flex; align-items: center; gap: 10px;  border: none; color: #f4a7a2; font-size: 18px; cursor: pointer;">
+            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+                <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+            </svg>
+            <span class="text">Make Reservations</span>
+        </button>
+        <button class="btn rounded-pill m-2" type="submit" style="background-color: #84e3d1; color: white; width: 200px; height: 50px;">Order Services</button>
+    </div><br>
+
+
+</section>
+
+<section style="background-color: #f4a7a2; width: 100%; height: auto; padding: 20px 0;">
+    <!-- footer -->
+    <div class="d-flex justify-content-center text-white" style="background-color: #f4a7a2; ">
+        <div style="width: 30%; max-width: 500px; height: 500px; border-radius:10px; background-color: #84e3d1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-left: 2%; border: 5px solid #84e3d1;">
+            <div style="text-align: center;">
+                <img src="https://scontent.fcok4-1.fna.fbcdn.net/v/t39.30808-1/284702706_107684228626280_4969446000244040217_n.jpg?stp=dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=DVUQ4_7KH1UQ7kNvgGgvCJG&_nc_ht=scontent.fcok4-1.fna&oh=00_AYBVQcZsAeRVgKRKnfJYUwicJfyJnPoBm1oN13vbFCihMQ&oe=66D916B8" alt="Information Image" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 50%;">
+            </div><br>
+            <p class="card-text" class="mb-2 py-4" style=" color: black; font-size: 18px;">
+                <b class="card-text" style="font-size: 20px;">Lizara Event Management</b> brings your vision to life with creativity, precision, and a touch of elegance. Whether it's a corporate event, wedding, or social gathering, we are committed to making every moment unforgettable. Let us take care of the details so you can enjoy the experience.
+            </p>
+        </div>
+        
+        <div class="m-3" style="color: black; font-size: 20px; margin-left: 2%; margin-top: 2%; padding-top: 120px;">
+            <h4 class="card-text" style="font-size: 50px;">LIZARA</h4>
+            <p class="card-text pt-2">
+                <a href="#HOME1" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Home
+                </a>
+                
+            </p>
+            
+            <p class="card-text">
+                <a href="#aboutme12" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> About Us
+                </a>
+            </p>
+            
+            <p class="card-text">
+                <a href="#services123" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Our Services
+                </a>
+            </p>
+           
+            <p class="card-text">
+                <a href="#instagram123" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Instagram Feeds
+                </a>
+            </p>
+        </div>
+
+       
+        <div class="m-1" style="color: black; font-size: 20px; margin-top: 2%; padding-top: 200px;">
+            <p class="card-text">
+                <a href="#reserv" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Reservations
+                </a>
+            </p>
+            <p class="card-text">
+                <a href="#organizerscard" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Our Team
+                </a>
+            </p>
+            <p class="card-text">
+                <a href="#" class="text-black hover:underline">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>PrivacyPolicy
+                </a>
+            </p>
+            
+        </div>
+        <div class="m-5" style="padding-left: 2%; margin-top: 2%; color: black;padding-top: 150px;">
+            
+            <h4 class="card-text" >Contact Us:</h4>
+            <h1 class="card-text" class="pt-2" style="font-size: 20px;"><i class="fa-solid fa-phone-volume"></i> Call Us:</h1>
+            <p>(123)456-789-00</p>
+            <h1 class="card-text" style="font-size: 20px;"><i class="fa-solid fa-envelope"></i> Email Us:</h1>
+            <p>lizara@gmail.com</p>
+        </div>
+        
+        <div class="m-5" style="padding-left: 2%; margin-top: 2%;padding-top: 100px;">
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.2235473808037!2d76.94800757449396!3d8.467208397530893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbcf240a4459%3A0x2631166f3671db3!2sLizara!5e1!3m2!1sen!2sin!4v1725185532965!5m2!1sen!2sin" width="400px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+    <h1 class="card-text" style="text-align: center; font-size: 20px;" >Copyright ©2024 Lizara.com All Rights Reserved</h1>
+</section>
+
+
 </body>
+
 </html>
