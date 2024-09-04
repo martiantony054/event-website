@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="./284702706_107684228626280_4969446000244040217_n.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+      body {
+        font-family: "Alegreya", serif;
+      }
+      #modal1:target {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      #modal2:target {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+    </style>
+</head>
+<body class="bg-cover bg-center bg-no-repeat min-h-screen" style="background-image: url('https://wallpapers.com/images/high/4k-marble-background-y3feopeupar1euf2.webp');">
+  <div class="min-h-screen flex flex-col lg:flex-row items-center justify-center p-4">
+      
+      <div class="bg-teal-200 p-8 rounded-lg shadow-lg max-w-md max-h-lg  mb-8 lg:mb-0 mb-0">
+          <div class="text-center mb-6">
+              <img src="https://scontent.fcok4-1.fna.fbcdn.net/v/t39.30808-1/284702706_107684228626280_4969446000244040217_n.jpg?stp=dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=DVUQ4_7KH1UQ7kNvgGgvCJG&_nc_ht=scontent.fcok4-1.fna&oh=00_AYBVQcZsAeRVgKRKnfJYUwicJfyJnPoBm1oN13vbFCihMQ&oe=66D916B8" alt="Logo" class="mx-auto w-16 h-16" style="position: relative; bottom: 10px;">
+              <h2 class="text-2xl font-bold text-gray-800 " style="position: relative; top:10px">WELCOME TO LIZARA EVENTS</h2>
+          </div>
+          <form>
+              <div class="mb-4">
+                  <label class="block text-gray-700">Email address</label>
+                  <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700">Password</label>
+                  <input type="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                  <label class="flex items-center">
+                      <input type="checkbox" class="form-checkbox">
+                      <span class="ml-2 text-sm text-gray-600">I have read all the <a href="#modal1" class="text-blue-500">terms and conditions</a></span>
+                  </label>
+                  <a href="#modal2" class="text-xs sm:text-sm text-blue-500 hover:underline">Forgot password?</a>
+              </div>
+              <div class="mb-6">
+                  <button class="w-full bg-red-300 text-black py-2 rounded-lg hover:bg-white transition">Sign in</button>
+              </div>
+              <p class="p line text-black">Or Login  With</p>
+
+<div class="flex-row">
+  <button class="btn google  hover:bg-gray-400">    
+    <svg
+      xml:space="preserve"
+      style="enable-background:new 0 0 512 512;"
+      viewBox="0 0 512 512"
+      y="0px"
+      x="0px"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns="http://www.w3.org/2000/svg"
+      id="Layer_1"
+      width="20"
+      version="1.1"
+    >
+      <path
+        d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+C103.821,274.792,107.225,292.797,113.47,309.408z"
+        style="fill:#FBBB00;"
+      ></path>
+      <path
+        d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"
+        style="fill:#518EF8;"
+      ></path>
+      <path
+        d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"
+        style="fill:#28B446;"
+      ></path>
+      <path
+        d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+C318.115,0,375.068,22.126,419.404,58.936z"
+        style="fill:#F14336;"
+      ></path>
+    </svg>
+
+    Google</button>
+    <button class="btn apple text-black hover:bg-black hover:text-white  "><i class="fa-brands fa-apple"></i>Apple</button>
+</div>
+          </form>
+      </div>
+      
+    
+      <div class="flex flex-col justify-center items-center max-h-lg p-6 text-white rounded-lg" style="background-image: url(https://images.pexels.com/photos/948185/pexels-photo-948185.jpeg?auto=compress&cs=tinysrgb&w=600); height: 72vh; background-size: cover;">
+        <h2 class="text-3xl font-bold mb-12">Join the Lizara Community</h2>
+        <p class="mb-6 text-center font-bold">Sign up today and start planning your next unforgettable event with ease.</p>
+        
+       
+        <ul class="mb-6 space-y-4">
+            <li class="flex items-center font-bold">
+                <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18l-6-6 6-6 6 6-6 6z" />
+                </svg>
+                <span>Easy event management tools</span>
+            </li>
+            <li class="flex items-center font-bold">
+                <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18l-6-6 6-6 6 6-6 6z" />
+                </svg>
+                <span>Access to exclusive event resources</span>
+            </li>
+            <li class="flex items-center font-bold">
+                <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 18l-6-6 6-6 6 6-6 6z" />
+                </svg>
+                <span>Connect with top event planners</span>
+            </li>
+        </ul>
+    
+      
+         <a href="./newregisteration.html"><button class="bg-red-300 hover:bg-white text-black font-bold py-2 px-4 rounded-full">
+          Sign Up
+      </button></a>
+       
+    
+       
+        <p class="mt-6 text-sm italic font-bold">"Lizzara made planning our event effortless and enjoyable!"</p>
+    </div>
+    
+  </div>
+
+  
+  <div id="modal1" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4">
+          <div class="flex justify-between items-center bg-teal-300 text-white p-4 rounded-t-lg">
+              <h3 class="text-lg">Terms & Conditions</h3>
+              <a href="#" class="text-white text-xl">&times;</a>
+          </div>
+          <div class="p-4">
+              <p class="text-sm text-gray-700 leading-relaxed">
+                  Welcome to LIZARA. By accessing or using our platform, you agree to be bound by the following terms and conditions
+              </p>
+              <p class="mt-2">1. <strong>Acceptance of Terms</strong>: By accessing and using our services, you agree to be bound by these terms and conditions.</p>
+              <p class="mt-2">2. <strong>Intellectual Property</strong>: All content on the Site, including text, graphics, logos, and images, is the property of Lizara and is protected by copyright, trademark, and other intellectual property laws.</p>
+              <p class="mt-2">3. <strong>Privacy</strong>: Your use of the Site is governed by our Privacy Policy, which explains how we collect, use, and protect your personal information.</p>
+              <p class="mt-2">4. <strong>Changes to Terms</strong>: Lizara reserves the right to modify these Terms and Conditions at any time. Changes will be posted on the Site, and your continued use of the Site constitutes acceptance of the updated Terms.</p>
+              <p class="mt-2">5. <strong>Event Details</strong>: Lizara is not responsible for any changes or cancellations made by third-party vendors.</p>
+              
+          </div>
+          <div class="flex justify-end p-4">
+              <a href="#" class="bg-red-300 text-white px-4 py-2 rounded hover:bg-red-400">Close</a>
+          </div>
+      </div>
+  </div>
+  <div id="modal2" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4">
+        <div class="flex justify-between items-center bg-teal-300 text-white p-4 rounded-t-lg">
+            <h3 class="text-lg text-center">Reset Password</h3>
+            <a href="#" class="text-white text-xl">&times;</a>
+        </div>
+        <div class="p-4">
+          <form>
+            <input value="https://jamstacker.studio/thankyou" type="hidden" name="_redirect">
+            <div class="mt-4 space-y-6">
+              <div class="col-span-full">
+                <label class="block mb-3 text-sm font-medium text-gray-600">New Password</label>
+                <input type="password" placeholder="******" class="block w-full px-6 py-3 text-black bg-white border border-gray-200 rounded-full appearance-none placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm">
+              </div>
+              <div class="col-span-full">
+                <label class="block mb-3 text-sm font-medium text-gray-600"> Confirm password</label>
+                <input type="password" placeholder="******" class="block w-full px-6 py-3 text-black bg-white border border-gray-200 rounded-full appearance-none placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm">
+              </div>
+              <div class="col-span-full">
+                <button type="submit" class="items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-red-300 border-2 border-white rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"> Submit your request </button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
